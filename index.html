@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Химические связи | Сургутский Политехнический Колледж</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="SPK_logo_2.svg" alt="Логотип" width="50" height="50">
+                </div>                
+                <div>
+                    <div class="college-name">Сургутский Политехнический Колледж</div>
+                    <span>Химические связи</span>
+                </div>
+            </div>
+            <div class="theme-toggle" id="themeToggle"></div>
+        </header>
+
+        <main>
+            <!-- Экран загрузки -->
+            <div class="screen loading active" id="loadingScreen">
+                <div class="loading-spinner"></div>
+                <p>Загрузка вопросов...</p>
+            </div>
+
+            <!-- Экран приветствия -->
+            <div class="screen welcome-screen" id="welcomeScreen">
+                <h1>Типы химических связей</h1>
+                <p>Проверка знаний для учащихся 9-10 классов Сургутского Политехнического Колледжа. Ответьте на вопросы и получите оценку!</p>
+                
+                <div class="game-info">
+                    <div class="info-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Программа первого курса</h3>
+                        <p>Соответствует учебному плану колледжа</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Оценка знаний</h3>
+                        <p>Получите оценку по 5-балльной системе</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Подробные объяснения</h3>
+                        <p>Узнайте больше после завершения теста</p>
+                    </div>
+                </div>
+                
+                <button class="btn" id="startBtn">Начать тест</button>
+            </div>
+
+            <!-- Экран с вопросами -->
+            <div class="screen quiz-screen" id="quizScreen">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span>Вопрос <span id="currentQuestion">1</span> из <span id="totalQuestions">10</span></span>
+                    </div>
+                </div>
+                
+                <div class="question-container">
+                    <div class="question-text" id="questionText"></div>
+                    <div class="options-container" id="optionsContainer"></div>
+                </div>
+                
+                <div class="navigation">
+                    <button class="btn hidden" id="prevBtn">Назад</button>
+                    <button class="btn" id="nextBtn">Далее</button>
+                </div>
+            </div>
+
+            <!-- Экран результатов -->
+            <div class="screen results-screen" id="resultsScreen">
+                <h2>Результаты теста</h2>
+                
+                <div class="score-circle" id="scoreCircle">
+                    <div class="score-inner">
+                        <div class="score-text" id="scorePercent">0%</div>
+                        <div class="score-percent">правильных ответов</div>
+                    </div>
+                </div>
+                
+                <div class="grade-info">
+                    <h3>Ваша оценка: <span id="finalGrade">2</span></h3>
+                    <p id="gradeComment"></p>
+                </div>
+                
+                <div class="grade-scale">
+                    <div class="grade-item grade-2" id="grade2">
+                        <div class="grade-value">2</div>
+                        <div>до 50%</div>
+                    </div>
+                    <div class="grade-item grade-3" id="grade3">
+                        <div class="grade-value">3</div>
+                        <div>50-74%</div>
+                    </div>
+                    <div class="grade-item grade-4" id="grade4">
+                        <div class="grade-value">4</div>
+                        <div>75-89%</div>
+                    </div>
+                    <div class="grade-item grade-5" id="grade5">
+                        <div class="grade-value">5</div>
+                        <div>90-100%</div>
+                    </div>
+                </div>
+                
+                <div class="explanation">
+                    <h3>Объяснение результатов</h3>
+                    <div id="explanationContent"></div>
+                </div>
+                
+                <button class="btn" id="restartBtn">Пройти снова</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Тест по химии: Типы химических связей | Сургутский Политехнический Колледж</p>
+            <p>© 2023 Кафедра химии. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
