@@ -235,8 +235,9 @@ function generateExplanations() {
         explanationItem.innerHTML = `
             <p><strong>Вопрос ${index + 1}:</strong> ${question.question}</p>
             <p><strong>Ваш ответ:</strong> <span class="${isCorrect ? 'correct' : 'incorrect'}">${question.options[userAnswerIndex]}</span></p>
-            ${!isCorrect ? `<p><strong>Правильный ответ:</strong> ${question.options[question.answer]}</p>` : ''}
+            ${!isCorrect ? `<p><strong>Правильный ответ:</strong> <span class="right-answer">${question.options[question.answer]}</span></p>` : ''}
             <p><strong>Объяснение:</strong> ${question.explanation}</p>
+            <div class="answer-status">${isCorrect ? '<span class="correct-icon">✅ Правильно</span>' : '<span class="incorrect-icon">❌ Неправильно</span>'}</div>
         `;
         
         explanationContent.appendChild(explanationItem);

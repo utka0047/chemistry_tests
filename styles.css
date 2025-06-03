@@ -452,3 +452,63 @@ footer {
         align-items: center;
     }
 }
+
+.correct {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.correct::before {
+    content: '✓ ';
+}
+
+.incorrect {
+    color: var(--error);
+    font-weight: 600;
+}
+
+.incorrect::before {
+    content: '✗ ';
+}
+
+.explanation-item p {
+    margin-bottom: 8px;
+}
+
+.explanation-item strong {
+    color: var(--text-primary);
+}
+
+.right-answer {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.right-answer::before {
+    content: '✓ ';
+}
+
+
+.correct-icon {
+    color: var(--success);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.incorrect-icon {
+    color: var(--error);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.answer-status {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.05);
+    display: inline-block;
+}
